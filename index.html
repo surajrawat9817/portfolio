@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Rawat - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .typing-animation {
+            
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            width: 0;
+            animation: typing 5s steps(50) forwards,
+                       blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 78% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .fade-in-up-delay-1 {
+            animation-delay: 0.5s;
+        }
+
+        .fade-in-up-delay-2 {
+            animation-delay: 1s;
+        }
+
+        .fade-in-up-delay-3 {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-links a {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between items-center h-16">
+            
+            <!-- Brand -->
+            <div class="flex items-center">
+              <a href="index.html" class="text-xl font-bold text-gray-800">Suraj Rawat</a>
+            </div>
+      
+            <!-- Hamburger Button (Mobile) -->
+          <div class="md:hidden my-2">
+            <button id="nav-toggle" class="text-white bg-black px-3 py-2 rounded focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            </div>
+      
+            <!-- Navigation Links -->
+            <div id="nav-menu" class="hidden md:flex items-center space-x-4">
+              <a href="index.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Home</a>
+              <a href="experiences.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Experience</a>
+              <a href="projects.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Projects</a>
+            </div>
+          </div>
+      
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 py-2">
+            <a href="index.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Home</a>
+            <a href="experiences.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Experience</a>
+            <a href="projects.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Projects</a>
+          </div>
+        </div>
+      </nav>
+    
+      
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <span class="typing-animation inline-block">Hi, I'm Suraj Rawat</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-600 mb-6 fade-in-up fade-in-up-delay-1">
+                        Full Stack Developer
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed fade-in-up fade-in-up-delay-2">
+                       Passionate full stack developer turning ideas into impactful digital experiences. Always building, always evolving. 
+                    </p>
+                    <div class="flex space-x-4 social-links fade-in-up fade-in-up-delay-3">
+                        <a href="#" class="text-2xl text-gray-600 hover:text-blue-600">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-600 hover:text-blue-600">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-600 hover:text-blue-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="SurajRawat.jpeg" alt="Profile"
+                        class="rounded-full w-64 h-64 object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-10">
+            
+            <!-- About Me -->
+            <div class="flex-1">
+              <h3 class="text-3xl font-bold text-gray-900 mb-3">About Me</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Hey there! 👋 I'm a Full Stack Developer with 3+ years of hands-on experience building scalable, cloud-ready applications. From crafting responsive UIs in <strong>React</strong> to designing efficient APIs in <strong>.NET Core</strong>, I love bridging the gap between design and functionality.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                I'm all about clean architecture, microservices, DevOps practices, and continuous learning. Whether it's deploying with <strong>Docker & Kubernetes</strong> or building seamless CI/CD pipelines — I enjoy turning ideas into real, working solutions. Let's build something cool together! 🚀
+              </p>
+            </div>
+      
+            <!-- Skills -->
+            <div class="flex-1">
+              <h3 class="text-3xl font-bold text-gray-900 mb-3">Skills</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <!-- Languages -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>C#</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>JavaScript</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Python</span></div>
+      
+                <!-- Backend -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>.NET Core</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Entity Framework</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Node.js</span></div>
+      
+                <!-- Frontend -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>React.js</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Angular</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Bootstrap</span></div>
+      
+                <!-- Databases -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>MongoDB</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>PostgreSQL</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Redis</span></div>
+      
+                <!-- DevOps / Tools -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Docker</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Kubernetes</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Azure</span></div>
+      
+                <!-- Extras -->
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>CI/CD</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>JWT Auth</span></div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Suraj Rawat. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="mailto:your.email@example.com" class="hover:text-blue-400">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+  
+<script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    navToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</html>

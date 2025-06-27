@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Rawat - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+        }
+        .modal.show {
+            display: flex;
+        }
+    </style>
+    <script>
+        function openModal(projectId) {
+            document.getElementById(projectId).classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(projectId) {
+            document.getElementById(projectId).classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between items-center h-16">
+            
+            <!-- Brand -->
+            <div class="flex items-center">
+              <a href="index.html" class="text-xl font-bold text-gray-800">Suraj Rawat</a>
+            </div>
+      
+            <!-- Hamburger Button (Mobile) -->
+          <div class="md:hidden my-2">
+            <button id="nav-toggle" class="text-white bg-black px-3 py-2 rounded focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            </div>
+      
+            <!-- Navigation Links -->
+            <div id="nav-menu" class="hidden md:flex items-center space-x-4">
+              <a href="index.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Home</a>
+              <a href="experiences.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Experience</a>
+              <a href="projects.html" class="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Projects</a>
+            </div>
+          </div>
+      
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 py-2">
+            <a href="index.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Home</a>
+            <a href="experiences.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Experience</a>
+            <a href="projects.html" class="block text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Projects</a>
+          </div>
+        </div>
+      </nav>
+    
+
+    <!-- Projects Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-12">My Projects</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project1')">
+                    <img src="EshopMartProject.png" 
+                         alt="Project 1" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">EshopMart – E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            A modern, cloud-native e-commerce platform developed with a microservices architecture. 
+                            Features include user authentication, product catalog, cart, order management, and secure checkout. 
+                            Deployed using Docker & Kubernetes with CI/CD integration and scalable design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">.NET 8</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Angular</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Kubernetes</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Redis</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">RabbitMQ</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/surajrawat9817/EshopMart" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project2')">
+                    <img src="fiddlerProject.png" 
+                         alt="Fiddler Calls Visualizer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-gray-900 mb-2">Fiddler Calls Visualizer</h3>
+                      <p class="text-gray-600 mb-4">
+                        A web-based visualization tool to explore HTTP traffic from Fiddler `.har` logs using dynamic graph layouts and advanced filters. Ideal for developers and testers analyzing API call flows and debugging integrations.
+                      </p>
+                      <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Express.js</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">D3.js</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Bootstrap</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">HTML5</span>
+                      </div>
+                      <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername/fiddler-calls-visualizer" target="_blank" class="text-blue-600 hover:text-blue-800">
+                          <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://fiddler-visualizer-demo.netlify.app" target="_blank" class="text-blue-600 hover:text-blue-800">
+                          <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project3')">
+                    <img src="CrudProject.png" 
+                         alt="Node.js CRUD App" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-gray-900 mb-2">CRUD API with Swagger
+                    </h3>
+                      <p class="text-gray-600 mb-4">
+                        Developed a robust Node.js CRUD application featuring user authentication with email activation, secure password handling, 
+                        product management with validation, and shopping cart operations. Fully documented with Swagger and deployed on Render 
+                        using CI/CD via GitHub Actions.
+                      </p>
+                      <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Express.js</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Swagger</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Nodemailer</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GitHub Actions</span>
+                      </div>
+                      <div class="flex space-x-4">
+                        <a href="https://github.com/surajrawat9817/EshopMart" target="_blank" class="text-blue-600 hover:text-blue-800">
+                          <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://eshopmart-node-crud.onrender.com" target="_blank" class="text-blue-600 hover:text-blue-800">
+                          <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Modal 1 -->
+    <div id="project1" class="modal">
+        <div class="bg-white w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-8 rounded-lg shadow-2xl overflow-y-auto max-h-[90vh]">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-900">EshopMart - E-Commerce Platform</h2>
+                <button onclick="closeModal('project1')" class="text-gray-500 hover:text-gray-700 text-2xl">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">.NET 8</span>
+                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Microservices</span>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Kubernetes</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Azure</span>
+              </div>
+              <img src="EshopMartProject.png" alt="EshopMart Project" class="w-full h-64 object-cover rounded-lg mb-6" />
+              <div class="space-y-4">
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Project Overview</h3>
+                  <p class="text-gray-600">
+                    EshopMart is a cloud-native e-commerce platform built with a microservices architecture, offering a seamless shopping experience across devices. Designed to scale and handle high traffic, the platform integrates modern DevOps, real-time logging, and service mesh capabilities.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+                  <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <li>Microservices for Catalog, Identity, Orders, and Payments</li>
+                    <li>JWT-based Authentication and Authorization</li>
+                    <li>Containerized deployment with Docker & Kubernetes</li>
+                    <li>API Gateway using Ocelot</li>
+                    <li>Centralized Logging with ELK Stack</li>
+                    <li>CI/CD pipeline integration and Azure Kubernetes Deployment</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Technologies Used</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">.NET Core</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Entity Framework</span>
+                    <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">SQL Server</span>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">Redis</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Docker</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Kubernetes</span>
+                    <span class="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Azure</span>
+                  </div>
+                </div>
+                <div class="flex space-x-4 pt-4">
+                  <a href="https://github.com/yourusername/eshopmart" target="_blank" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700">
+                    <i class="fab fa-github mr-2"></i> View Code
+                  </a>
+                  <a href="https://fiddlermapper.onrender.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
+                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="project2" class="modal">
+        <div class="bg-white w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-8 rounded-lg shadow-2xl overflow-y-auto max-h-[90vh]">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">Fiddler Calls Visualizer</h2>
+              <button onclick="closeModal('project2')" class="text-gray-500 hover:text-gray-700 text-2xl">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <img src="fiddlerProject.png" 
+                 alt="Fiddler Visualizer" 
+                 class="w-full h-64 object-cover rounded-lg mb-6">
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Project Overview</h3>
+                <p class="text-gray-600">
+                  Built a web-based tool to visualize HTTP traffic logs captured by Fiddler. Users can upload `.har` files and inspect request/response dependencies through an interactive force-directed graph. This helps developers and testers analyze API behavior and session flows more intuitively.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                  <li>Visualizes HTTP traffic using a force-directed graph layout</li>
+                  <li>Parses `.har` files to extract session and call data</li>
+                  <li>UI panels for viewing headers, cookies, body, and query params</li>
+                  <li>Filtering and grouping calls based on domain and session ID</li>
+                  <li>Search functionality for quick inspection of specific requests</li>
+                  <li>Designed for performance with efficient rendering and interaction</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Technologies Used</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Express.js</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">D3.js</span>
+                  <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Bootstrap</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">HTML5</span>
+                </div>
+              </div>
+              <div class="flex space-x-4 pt-4">
+                <a href="https://github.com/yourusername/fiddler-calls-visualizer" target="_blank" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700">
+                  <i class="fab fa-github mr-2"></i> View Code
+                </a>
+                <a href="https://fiddler-visualizer-demo.netlify.app" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
+                  <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+
+    <!-- Modal 3 -->
+    <div id="project3" class="modal">
+        <div class="bg-white w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-8 rounded-lg shadow-2xl overflow-y-auto max-h-[90vh]">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">CRUD API with Swagger</h2>
+              <button onclick="closeModal('project3')" class="text-gray-500 hover:text-gray-700 text-2xl">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Express.js</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Swagger</span>
+              <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Nodemailer</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GitHub Actions</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Render</span>
+            </div>
+            <img src="crudProject.jpeg" alt="Node.js CRUD API Project" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Project Overview</h3>
+                <p class="text-gray-600">
+                  Developed a robust Node.js CRUD application with integrated Swagger documentation for seamless API exploration and management. This backend application supports essential e-commerce operations and demonstrates best practices in secure, scalable API development.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                  <li>User authentication with email activation links</li>
+                  <li>Secure password hashing and validation</li>
+                  <li>Complete product CRUD endpoints with input validation</li>
+                  <li>Shopping cart functionality with persistent state</li>
+                  <li>Integrated Swagger UI for interactive API documentation</li>
+                  <li>Robust error handling and structured responses</li>
+                  <li>CI/CD pipeline using GitHub Actions</li>
+                  <li>Deployed on Render with seamless auto-updates</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Technologies Used</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Express.js</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Swagger</span>
+                  <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Nodemailer</span>
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GitHub Actions</span>
+                  <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Render</span>
+                </div>
+              </div>
+              <div class="flex space-x-4 pt-4">
+                <a href="https://github.com/yourusername/node-crud-api" target="_blank" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700">
+                  <i class="fab fa-github mr-2"></i> View Code
+                </a>
+                <a href="https://storefleet.onrender.com/api-docs/#/" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
+                  <i class="fas fa-external-link-alt mr-2"></i> Swagger Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Suraj Rawat. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="mailto:your.email@example.com" class="hover:text-blue-400">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    navToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</html>
+
